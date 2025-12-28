@@ -3,68 +3,490 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chiru Abhinash | Home</title>
+  <title>Chiru Abhinash | Portfolio</title>
+  <meta name="description" content="Portfolio of Nalagarla Chiru Abhinash, AI/ML Enthusiast and Associate Software Engineer at ADP India.">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    .navbar {
+      background: linear-gradient(90deg, #343a40, #495057);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .hero img {
+      border: 5px solid white;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .section {
+      padding: 80px 0;
+    }
+    .section h2 {
+      margin-bottom: 50px;
+      color: #495057;
+      position: relative;
+    }
+    .section h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: #007bff;
+    }
+    .skill-item {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 20px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .skill-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .skill-bar {
+      background: #f1f1f1;
+      border-radius: 10px;
+      height: 25px;
+      overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      border-radius: 10px;
+      transition: width 1s ease;
+      position: relative;
+    }
+    .project-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-bottom: 30px;
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+    .achievement-card, .cert-card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+      margin-bottom: 20px;
+      aspect-ratio: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .sub-card {
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      transition: transform 0.3s;
+    }
+    .sub-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .achievement-card.non-square, .cert-card.non-square {
+      aspect-ratio: auto;
+      min-height: 300px;
+      justify-content: flex-start;
+    }
+    .achievement-card:hover, .cert-card:hover {
+      transform: translateY(-5px);
+    }
+    .experience-item {
+      background: #f8f9fa;
+      border-left: 5px solid #007bff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+    .contact-section {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 60px 0;
+      border-radius: 15px;
+    }
+    .social-icons a {
+      font-size: 2rem;
+      margin: 0 15px;
+      color: #007bff;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .social-icons a:hover {
+      color: #0056b3;
+      transform: scale(1.2);
+    }
+    footer {
+      background: #343a40;
+      color: white;
+      padding: 20px 0;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">Chiru Abhinash</a>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="#hero">Chiru Abhinash</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
-        <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section with Photo -->
-  <header class="bg-primary text-white text-center py-5">
+  <!-- Hero Section -->
+  <header id="hero" class="hero">
     <div class="container">
-      <img src="images/photo.jpg" alt="Chiru Abhinash" class="rounded-circle" width="300" height="300">
-      <h1 class="display-4 mt-3">Nalagarla Chiru Abhinash</h1>
-      <p class="lead">AI/ML Enthusiast | B.Tech in Artificial Intelligence & Machine Learning</p>
-      <a href="chiru_abhinash_resume_lg.pdf" class="btn btn-light m-2" download>Download My Resume</a>
+      <img src="images/photo.jpg" alt="Chiru Abhinash" class="rounded-circle animate__animated animate__fadeInDown" width="250" height="250">
+      <h1 class="display-4 mt-4 animate__animated animate__fadeInUp">Nalagarla Chiru Abhinash</h1>
+      <p class="lead animate__animated animate__fadeInUp animate__delay-1s">AI/ML Enthusiast | Associate Software Engineer at ADP India</p>
+      <a href="Abhinash_N_resume.pdf" class="btn btn-light btn-lg m-2 animate__animated animate__fadeInUp animate__delay-2s" download>Download Resume</a>
     </div>
   </header>
 
   <!-- About Me Section -->
-  <section class="container py-5">
-    <h2 class="text-center">About Me</h2>
-    <p class="text-center">
-      Hello! I'm Nalagarla Chiru Abhinash, a passionate AI/ML enthusiast currently pursuing a B.Tech in Artificial Intelligence & Machine Learning. I have a deep interest in solving complex problems using innovative machine learning techniques, and I continuously work on improving my skills in various AI tools like TensorFlow, PyTorch, and Scikit-learn. With a strong foundation in programming languages such as Python and Java, along with hands-on experience in web development and database management, I strive to bridge the gap between theory and practice. I am always excited to take on new challenges and contribute to impactful projects that leverage technology to make a difference.
-    </p>
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="text-center">About Me</h2>
+      <div class="text-center mb-5">
+        <p class="animate__animated animate__fadeInLeft" style="max-width: 800px; margin: 0 auto;">
+          Hello! I'm Nalagarla Chiru Abhinash, a passionate AI/ML enthusiast who has completed my B.Tech in Artificial Intelligence & Machine Learning from Vel Tech University, Chennai. I have a deep interest in solving complex problems using innovative machine learning techniques, and I continuously work on improving my skills in various AI tools like TensorFlow, PyTorch, and Scikit-learn. With a strong foundation in programming languages such as Python and Java, along with hands-on experience in web development and database management, I strive to bridge the gap between theory and practice. I am always excited to take on new challenges and contribute to impactful projects that leverage technology to make a difference.
+        </p>
+      </div>
+    </div>
+    <div class="bg-light py-5">
+      <div class="container">
+        <h3 class="text-center mb-4">Education</h3>
+        <div class="table-responsive animate__animated animate__fadeInUp">
+          <table class="table table-hover table-bordered mx-auto" style="max-width: 1000px;">
+            <thead class="thead-dark">
+              <tr>
+                <th>Degree</th>
+                <th>Stream</th>
+                <th>Institute</th>
+                <th>Year</th>
+                <th>% or CGPA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>B.Tech</td>
+                <td>Artificial Intelligence & Machine Learning</td>
+                <td>Vel Tech University, Chennai</td>
+                <td>2025</td>
+                <td>9.48</td>
+              </tr>
+              <tr>
+                <td>12th</td>
+                <td>PCM</td>
+                <td>Chandra Reddy College, Nellore</td>
+                <td>2021</td>
+                <td>97.5%</td>
+              </tr>
+              <tr>
+                <td>10th</td>
+                <td>NA</td>
+                <td>V.B.R High School, Nellore</td>
+                <td>2019</td>
+                <td>10 CGPA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="text-center mt-5">
+        <h3>Technical Skills</h3>
+        <div class="row mt-4">
+          <div class="col-md-6">
+            <div class="skill-item">
+              <p><strong>Python Programming</strong></p>
+              <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <p><strong>Artificial Intelligence</strong></p>
+              <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <p><strong>Machine Learning</strong></p>
+              <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <p><strong>Generative AI</strong></p>
+              <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="skill-item">
+              <p><strong>Computer Vision</strong></p>
+              <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <p><strong>Natural Language Processing</strong></p>
+              <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <p><strong>Full Stack Development</strong></p>
+              <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+            </div>
+            <div class="skill-item">
+              <p><strong>Microsoft SQL Server</strong></p>
+              <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Skills Section -->
-  <section class="container py-5">
-    <div class="text-center">
-      <h2>Top Skills</h2>
-      <div class="row justify-content-center">
+  <!-- Experience Section -->
+  <section id="experience" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">Experience</h2>
+      <div class="experience-item animate__animated animate__fadeInUp">
+        <h3><i class="fas fa-briefcase"></i> Associate Software Engineer at ADP India</h3>
+        <p><strong>Jul 2025 - Present · 6 mos · Chennai, Tamil Nadu, India · Hybrid</strong></p>
+        <p>As an Associate Software Engineer, I am contributing to innovative software solutions, leveraging my expertise in AI/ML and full-stack development to deliver high-quality products.</p>
+      </div>
+      <div class="experience-item animate__animated animate__fadeInUp animate__delay-1s">
+        <h3><i class="fas fa-briefcase"></i> Intern at ADP India</h3>
+        <p><strong>Jan 2025 - Jul 2025 · 7 mos · Chennai, Tamil Nadu, India · Hybrid</strong></p>
+        <p>As an Intern, I gained valuable experience in software development, working on AI/ML projects and contributing to team initiatives under guidance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="text-center">Projects</h2>
+      <div class="row">
         <div class="col-md-6">
-          <ul class="list-unstyled">
-            <li><strong>Programming:</strong> Python, Java</li>
-            <li><strong>Web Development:</strong> HTML, CSS, Bootstrap, Streamlit</li>
-            <li><strong>AI Tools:</strong> TensorFlow, PyTorch, Scikit-learn</li>
-            <li><strong>Databases:</strong> Firebase, OracleSQL, MongoDB</li>
-            <li><strong>Automation:</strong> Uipath Studio</li>
-          </ul>
+          <div class="card project-card animate__animated animate__fadeInLeft">
+            <div class="card-body">
+              <h5 class="card-title">Automated Data Analyser using Generative AI</h5>
+              <p class="card-text">Developed a full-stack web application that automates Exploratory Data Analysis (EDA) using Python and Streamlit. Integrated Google Gemini LLM for contextual insights.</p>
+              <div class="embed-responsive embed-responsive-16by9 mb-3">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/90T0c0Es7GM" allowfullscreen></iframe>
+              </div>
+              <a href="https://github.com/chiru-abhinash/AUTOMATED_DATA_ANALYSER" class="btn btn-primary">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card project-card animate__animated animate__fadeInRight">
+            <div class="card-body">
+              <h5 class="card-title">Database Interaction Using Large Language Model</h5>
+              <p class="card-text">Developed an application enabling natural language querying of databases using generative AI. We facilitated effortless data retrieval from databases by converting user queries into SQL. </p>
+              <div class="embed-responsive embed-responsive-16by9 mb-3">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/3aQG4I50Vu8" allowfullscreen></iframe>
+              </div>
+              <a href="https://github.com/chiru-abhinash/Database-Interaction-Using-Gemini-LLM" class="btn btn-primary">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card project-card animate__animated animate__fadeInLeft">
+            <div class="card-body">
+              <h5 class="card-title">Improving The Regularity of Transport Services in Rural Areas</h5>
+              <p class="card-text">Designed a web application for scheduling transport services in rural regions, utilizing machine learning to optimize scheduling.</p>
+              <div class="embed-responsive embed-responsive-16by9 mb-3">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kDRo8XoH4fk" allowfullscreen></iframe>
+              </div>
+              <a href="https://github.com/chiru-abhinash/IMPROVING-THE-REGULARITY-OF-TRANSPORT-SERVICES-IN-RURAL-AREAS" class="btn btn-primary">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card project-card animate__animated animate__fadeInRight">
+            <div class="card-body">
+              <h5 class="card-title">Robust Human Target Detection and Acquisition in Outdoor Scenarios</h5>
+              <p class="card-text">Developed a robust system for human detection and tracking in outdoor scenarios, using advanced computer vision techniques.</p>
+              <a href="https://github.com/chiru-abhinash/ROBUST-HUMAN-TARGET-DETECTION-AND-ACQUISITION-IN-OUTDOOR-SCENARIOS" class="btn btn-primary">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="section bg-light">
+    <div class="container">
+      <h2 class="text-center">Achievements</h2>
+      <div class="row">
+        <div class="col-md-12 mb-4">
+          <div class="achievement-card non-square text-center animate__animated animate__fadeInUp">
+            <h5>Published Research Papers</h5>
+            <div class="row mt-3">
+              <div class="col-md-4">
+                <div class="sub-card">
+                  <h6>Automated Data Analyser using Generative AI</h6>
+                  <p class="small">IEEE | June 2, 2025</p>
+                  <p class="small">This Paper presents an intelligent system designed to automate Exploratory Data Analysis (EDA) by integrating generative AI.</p>
+                  <a href="https://ieeexplore.ieee.org/document/11013368" target="_blank" class="btn btn-primary btn-sm">Read the Paper</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sub-card">
+                  <h6>Enhanced Database Interaction Using Large Language Models</h6>
+                  <p class="small">IEEE | October 4, 2024</p>
+                  <p class="small">This paper focuses on simplifying database interactions by leveraging natural language processing and advanced generative AI models.</p>
+                  <a href="https://ieeexplore.ieee.org/document/10696623" target="_blank" class="btn btn-primary btn-sm">Read the Paper</a>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="sub-card">
+                  <h6>Transport Service Scheduling in Remote Regions</h6>
+                  <p class="small">IEEE IC3IoT | June 11, 2024</p>
+                  <p class="small">This paper focuses on optimizing vehicle schedules in remote regions using unsupervised machine learning algorithms.</p>
+                  <a href="https://ieeexplore.ieee.org/document/10550245" target="_blank" class="btn btn-primary btn-sm">Read the Paper</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mb-4">
+          <div class="achievement-card non-square text-center animate__animated animate__fadeInUp">
+            <h5>Won 4+ Coding Contests</h5>
+            <p>Won 4+ coding contests at Vel Tech University.</p>
+            <div class="d-flex justify-content-around mt-3">
+              <img src="images/c3.jpg" alt="Coding Contest" class="img-fluid" style="max-width: 260px; max-height: 260px;">
+              <img src="images/c2.jpg" alt="Coding Contest" class="img-fluid" style="max-width: 260px; max-height: 260px;">
+              <img src="images/c1.jpg" alt="Coding Contest" class="img-fluid" style="max-width: 260px; max-height: 260px;">
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col-md-12 mb-4">
+          <div class="achievement-card non-square text-center animate__animated animate__fadeInUp animate__delay-1s">
+            <h5>Smart India Hackathon 2024</h5>
+            <p>Finalist at Smart India Hackathon 2024.</p>
+            <img src="images/sih.jpg" alt="Smart India Hackathon" class="img-fluid mt-3">
+          </div>
+        </div>
+      
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="section">
+    <div class="container">
+      <h2 class="text-center">Certifications</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="cert-card text-center animate__animated animate__fadeInLeft">
+            <img src="images/amazon.png" alt="AI-ML Certification" class="img-fluid mb-3">
+            <h5>AI-ML Virtual Internship by Amazon</h5>
+            <p>Gained hands-on experience with AI/ML during an internship with Amazon.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="cert-card text-center animate__animated animate__fadeInUp">
+            <img src="images/google.png" alt="Android Developer Certification" class="img-fluid mb-3">
+            <h5>Android Developer Internship by Google</h5>
+            <p>Developed mobile applications during my virtual internship at Google.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="cert-card text-center animate__animated animate__fadeInLeft">
+            <img src="images/amazondata.png" alt="Data Analytics Virtual Internship" class="img-fluid mb-3">
+            <h5>Data Analytics Virtual Internship by Amazon.</h5>
+            <p>Gained hands-on experience with Data Science during an internship with Amazon.</p>
+        </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="cert-card text-center animate__animated animate__fadeInRight">
+            <img src="images/cisco.png" alt="Networks Course Certification" class="img-fluid mb-3">
+            <h5>Introduction to Networks</h5>
+            <p>Completed the Introduction to Networks course and learned networking fundamentals.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="cert-card text-center animate__animated animate__fadeInUp">
+            <img src="images/python.png" alt="Python Certification" class="img-fluid mb-3">
+            <h5>Programming Essentials In Python</h5>
+            <p>Completed the Programming Essentials In Python course and learned programming fundamentals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <div class="contact-section text-center">
+        <h2>Contact Me</h2>
+        <p>You can reach me at the following platforms:</p>
+        <div class="contact-info mb-4">
+          <p><strong>Email:</strong> <a href="mailto:nalagarlachiruabhinash@gmail.com">nalagarlachiruabhinash@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/chiru-abhinash" target="_blank">linkedin.com/in/chiru-abhinash</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/chiru-abhinash" target="_blank">github.com/chiru-abhinash</a></p>
+          <p><strong>LeetCode:</strong> <a href="https://leetcode.com/u/vtu20664/" target="_blank">leetcode.com/u/vtu20664</a></p>
+          <p><strong>HackerRank:</strong> <a href="https://www.hackerrank.com/profile/VTU20664" target="_blank">hackerrank.com/profile/VTU20664</a></p>
+          <p><strong>CodeChef:</strong> <a href="https://www.codechef.com/users/abhinash_n" target="_blank">codechef.com/users/abhinash_n</a></p>
+          <p><strong>Twitter:</strong> <a href="https://twitter.com/chiruabhinash" target="_blank">@chiruabhinash</a></p>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/chiru-abhinash" target="_blank" class="fab fa-linkedin"></a>
+          <a href="https://github.com/chiru-abhinash" target="_blank" class="fab fa-github"></a>
+          <a href="https://leetcode.com/u/vtu20664/" target="_blank" class="fab fa-code"></a>
+          <a href="https://www.hackerrank.com/profile/VTU20664" target="_blank" class="fab fa-hackerrank"></a>
+          <a href="https://twitter.com/chiruabhinash" target="_blank" class="fab fa-twitter"></a>
+          <a href="https://www.codechef.com/users/abhinash_n" target="_blank" class="fab fa-code"></a>
+        </div>
+        <div class="mt-4">
+          <a href="Abhinash_N_resume.pdf" class="btn btn-primary btn-lg" download>Download My Resume</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-4">
-    <p>&copy; 2024 Chiru Abhinash. All Rights Reserved.</p>
+  <footer class="text-center">
+    <p>&copy; 2025 Chiru Abhinash. All Rights Reserved.</p>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
